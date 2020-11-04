@@ -1,0 +1,66 @@
+{
+  "name": "inspect-h5",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server",
+    "build": "npm run build:production",
+    "build:production": "cross-env NODE_ENV=production node_modules/.bin/webpack-cli --display-error-details",
+    "build:dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-cli --display-error-details",
+    "analyze": "cross-env analyze=YES NODE_ENV=development node_modules/.bin/webpack-dev-server",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --fix --project tsconfig.json",
+    "ci": "echo ci not ready yet"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyt-tian/inspect-h5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoyt-tian/inspect-h5/issues"
+  },
+  "homepage": "https://github.com/hoyt-tian/inspect-h5#readme",
+  "config": {
+    "assets": {
+      "hash": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.8.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "less-plugin-rewrite-import": "^0.1.1",
+    "lint-staged": "^3.4.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-plugin-pxtorem": "^0.0.1",
+    "pre-commit": "^1.2.2",
+    "query-string": "^6.12.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "ts-loader": "^6.2.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^2.8.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-mild-compile": "^3.3.1"
+  }
+}
